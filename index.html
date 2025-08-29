@@ -9,18 +9,24 @@
     <script src="https://kit.fontawesome.com/a9a68f8b3f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <header id="header">
+  <header id="header">
   <!-- 이력서 헤더 : 이름과 타이틀 작성 -->
   <h1>Mechanical Engineering Student 
-    <br> LEE HANJIN</h1>
+    <br> LEE HANJIN
+  </h1>
   <hr>
   기계정보공학과 4학년 이한진
-  <br>작성한 논문:  📄 <a href="입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구.pdf" target="_blank">
-입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구 (PDF 보기) , <br><a href="CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers.pdf" target="_blank">
-CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers (PDF 보기) 
-
+  <br>
+  작성한 논문:
+  📄 <a href="입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구.pdf" target="_blank" rel="noopener">
+    입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구 (PDF 보기)
+  </a>,
+  📄 <a href="CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers.pdf" target="_blank" rel="noopener">
+    CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers (PDF 보기)
+  </a>
   <hr>
 </header>
+
 
 
 <main>
@@ -51,7 +57,7 @@ Academic Progress</span></p></h2>
       - 홍익대학교 과학기술대학<br>
       - 기계정보공학과 재학 중 (2019.03 ~ 현재)<br>
       - 작성한 논문:  📄 <a href="입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구.pdf" target="_blank">
-입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구 (PDF 보기) , <br><a href="CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers.pdf" target="_blank">
+입자-유체 연성 해석을 통한 침식-마모 저감형 해양 배관의 최적 설계 연구 (PDF 보기) , <br> 📄 <a href="CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers.pdf" target="_blank">
 CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers (PDF 보기) 
 </a>
 <br>
@@ -60,131 +66,90 @@ CFD-Based Methodology for P–Q Curve Measurement of Fan Impellers (PDF 보기)
         
     </section>         
 
-<canvas id="gradeChart" width="600" height="300"></canvas>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 
 
 <!-- GPA 그래프 -->
 <canvas id="gradeChart" width="600" height="300"></canvas>
 
-<!-- Chart.js 및 플러그인 불러오기 -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
-
-<!-- GPA 그래프 스크립트 -->
 <script>
   const ctx = document.getElementById('gradeChart').getContext('2d');
-  const gradeChart = new Chart(ctx, {
+  new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['1학년 1학기', '1학년 2학기', '2학년 1학기', '2학년 2학기', '3학년 1학기', '3학년 2학기', '4학년 1학기'],
+      labels: ['1학년 1학기','1학년 2학기','2학년 1학기','2학년 2학기','3학년 1학기','3학년 2학기','4학년 1학기'],
       datasets: [{
         label: 'GPA',
         data: [2.63, 1.46, 3.61, 3.88, 4.35, 4.24, 4.3],
         borderColor: 'rgba(54, 162, 235, 1)',
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
-        borderWidth: 2,
-        pointRadius: 4,
-        pointBackgroundColor: 'blue',
-        fill: true,
-        tension: 0.3
+        borderWidth: 2, pointRadius: 4, pointBackgroundColor: 'blue',
+        fill: true, tension: 0.3
       }]
     },
     options: {
       plugins: {
-        title: {
-          display: true,
-          text: '학기별 GPA 변화 추이'
-        },
-        legend: {
-          display: false
-        },
+        title: { display: true, text: '학기별 GPA 변화 추이' },
+        legend: { display: false },
         annotation: {
           annotations: {
             line4: {
-              type: 'line',
-              yMin: 4.0,
-              yMax: 4.0,
-              borderColor: 'red',
-              borderWidth: 2,
-              label: {
-                enabled: true,
-                content: '4.0 기준선',
-                position: 'end'
-              }
+              type: 'line', yMin: 4.0, yMax: 4.0,
+              borderColor: 'red', borderWidth: 2,
+              label: { enabled: true, content: '4.0 기준선', position: 'end' }
             }
           }
         }
       },
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 4.5,
-          ticks: {
-            stepSize: 1
-          },
-          title: {
-            display: true,
-            text: 'GPA'
-          }
-        }
-      }
+      scales: { y: { beginAtZero: true, max: 4.5, ticks: { stepSize: 1 }, title: { display: true, text: 'GPA' } } }
     }
   });
 </script>
 
+
 <section>
   <h2>
-    <p><span style="border-radius: 5em; padding: 0.6em 1em; background: #F9F9F9; 
-    box-shadow: 1px 2px 10px rgba(0,0,0,0.2); margin-left: 5px;"><i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.2em;"></i>
-wards and Honors<i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.2em;"></i>
-</span></p>
+    <span style="border-radius: 5em; padding: 0.6em 1em; background: #F9F9F9; box-shadow: 1px 2px 10px rgba(0,0,0,0.2); margin-left: 5px;">
+      <i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.1em;"></i>
+      Awards and Honors
+      <i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.1em;"></i>
+    </span>
   </h2>
   <ul>
-    <li><i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.2em;"></i>
-대상, 알테어 최적화 대회(AOC 2025), 알테어 엔지니어링 (2025년 8월)</li>
-    <br>
-    <li><i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.2em;"></i>
-최우수상, 해양공학 CAE 경진대회, 한국해양공학회(KSOE) (2025년 10월)</li>
-    <br>
-    <li><i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.2em;"></i>
-    <li>삼성 블루라이트하우스 장학금, 삼성 (2025년 6월)</li>
-    <br>
-    <li><i class="fa-solid fa-trophy" style="color: goldenrod; font-size: 1.2em;"></i>
-장려상, 디지털 창업 아이디어 경진대회, HUSS(인문사회융합), 홍익대학교 (2025년 8월)</li>
+    <li><i class="fa-solid fa-trophy" style="color: goldenrod;"></i> 대상, 알테어 최적화 대회 (AOC 2025), Altair Engineering (2025년 8월)</li>
+    <li><i class="fa-solid fa-trophy" style="color: goldenrod;"></i> 최우수상, 해양공학 CAE 경진대회, 한국해양공학회(KSOE) (2025년 10월)</li>
+    <li><i class="fa-solid fa-trophy" style="color: goldenrod;"></i> 삼성 블루라이트하우스 장학금, 삼성 (2025년 6월)</li>
+    <li><i class="fa-solid fa-trophy" style="color: goldenrod;"></i> 장려상, 디지털 창업 아이디어 경진대회, HUSS(인문사회), 홍익대학교 (2025년 8월)</li>
   </ul>
 </section>
+
 
 
 
    <section>
-  <h2><p><span style="border-radius: 5em; padding: 0.6em 1em; background: #F9F9F9; box-shadow: 1px 2px 10px rgba(0,0,0,0.2);  margin-left: 5px;"><i class="fa-solid fa-drafting-compass" style="color:#2c3e50;"></i>
-SKILL</span></p></h2>
+  <h2>
+    <span style="border-radius: 5em; padding: 0.6em 1em; background: #F9F9F9; box-shadow: 1px 2px 10px rgba(0,0,0,0.2); margin-left: 5px;">
+      <i class="fa-solid fa-drafting-compass" style="color:#2c3e50;"></i> SKILL
+    </span>
+  </h2>
   <ul>
-
-    
-    <li><strong>CAE</strong> 
-        <br>(HyperWorks): SimLab, EDEM, SimSolid, Inspire, NanoFluidX, ElectroFlo, AcuSolve 
-        <br>(ANSYS): Static Structural, Fluent, Modal, Steady/Transient Structural, Steady/Transient Thermal </li>
-        <br>
-
-    <li><strong>CAD
-        <br>
-    </strong> CATIA, Fusion 360, SpaceClaim, FreeCAD</li>
-
-    <br>
-    <li><strong>Machine Learning
-        <br>
-    </strong> GPR, MATLAB, Random Forest, SVR, SHAP, LIME (Python 기반 해석 및 시각화)</li>
-
-    <br>
-    <li><strong>하드웨어 및 실험 자동화
-        <br>
-    </strong> Raspberry Pi, Arduino, 센서 기반 데이터 측정 및 후처리 시스템 구축</li>
+    <li><strong><i class="fa-solid fa-cogs" style="color:#2c3e50;"></i> CAE</strong><br>
+      (HyperWorks) SimLab, EDEM, SimSolid, Inspire, NanoFluidX, ElectroFlo, AcuSolve; 
+      (ANSYS) Static Structural, Fluent, Modal, Steady/Transient Structural, Steady/Transient Thermal
+    </li>
+    <li><strong><i class="fa-solid fa-drafting-compass" style="color:#2c3e50;"></i> CAD</strong><br>
+      CATIA, Fusion 360, SpaceClaim, FreeCAD
+    </li>
+    <li><strong><i class="fa-solid fa-brain" style="color:#2c3e50;"></i> Machine Learning</strong><br>
+      GPR 기반 머신러닝, MATLAB 기반 Numerical Analysis(NA), Random Forest, SVR, SHAP, LIME
+    </li>
+    <li><strong><i class="fa-solid fa-microchip" style="color:#2c3e50;"></i> 하드웨어 및 실험 자동화</strong><br>
+      Raspberry Pi, Arduino, 센서 데이터 측정 및 후처리 시스템 구축
+    </li>
   </ul>
 </section>
+
 
 
 
@@ -285,10 +250,12 @@ Projects & Initiatives</span></p></h2>
   <ul>
     <img src="EDEMtw.gif" alt="EDEM 시뮬레이션 결과" width="400">
   
-    <div style="display: flex; align-items: center; gap: 1px;">
+   <div style="display:flex; align-items:center; gap:10px;">
   <img src="PARAVIEW.png" alt="최종 후 처리" width="200">
   <img src="pipere.png" alt="결과 비교" width="400">
 </div>
+
+
 
      <img src="GP.png" alt="머신러닝" width="400">
 
